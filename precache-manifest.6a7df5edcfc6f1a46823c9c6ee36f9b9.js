@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dcb1248d3e41821fe3f7f80ced999d7f",
+    "revision": "2ca5de2bf7b0e7991a4ccd9af73eaa21",
     "url": "/intrinsic-value-calculator/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/intrinsic-value-calculator/static/css/2.2a86faee.chunk.css"
   },
   {
-    "revision": "2e7642147e6e40365402",
+    "revision": "213124a1265a9d14b2ec",
     "url": "/intrinsic-value-calculator/static/css/main.a960fb8e.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/intrinsic-value-calculator/static/js/2.bc23b269.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2e7642147e6e40365402",
-    "url": "/intrinsic-value-calculator/static/js/main.72325c8f.chunk.js"
+    "revision": "213124a1265a9d14b2ec",
+    "url": "/intrinsic-value-calculator/static/js/main.e83f0888.chunk.js"
   },
   {
     "revision": "afa4acd48ce490c7d8e8",
