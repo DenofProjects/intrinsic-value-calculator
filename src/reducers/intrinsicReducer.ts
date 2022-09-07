@@ -117,8 +117,7 @@ const intrinsicReducer: Reducer<intrinsicDTO> = (
           (companySellingPrice + pvOfCashOnSellingTime + totalFCFPresentValue) *
           10000000;
 
-        newState.intrinsicValue =
-          totalValueation / parseInt(newState.totalShares);
+        newState.intrinsicValue =Math.floor(totalValueation / parseInt(newState.totalShares));
       }
       return newState;
     }
