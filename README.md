@@ -1,1 +1,1 @@
-# den-of-projects-task
+# intrinsic-value-calculator
