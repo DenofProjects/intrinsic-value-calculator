@@ -1,5 +1,6 @@
 {
   "name": "dress-nut-ui",
+  "homepage": "https://denofprojects.github.io/intrinsic-value-calculator",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,6 +14,7 @@
     "axios": "^0.19.2",
     "bootstrap": "^4.5.2",
     "cra-template": "1.0.3",
+    "gh-pages": "^4.0.0",
     "import": "0.0.6",
     "npm": "^6.14.8",
     "react": "^16.13.1",
@@ -27,6 +29,8 @@
     "typescript": "^3.9.7"
   },
   "scripts": {
+    "predeploy" : "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
