@@ -1,0 +1,7 @@
+cash flow inputs 10
+input for dicount rate
+input for first 5 year incriment rate
+input for next 5 year incriment rate
+input for total number of shares
+
+table for fcf and present fcf

@@ -1,2 +1,1 @@
-# intrinsic-value-calculator
-Intrinsic value calculator in react redux
+# den-of-projects-task
