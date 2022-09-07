@@ -1,17 +1,27 @@
-import { decriment, incriment } from "../reducerActions/intrinsicReducerActions";
+import {
+  calculateIntrinsicValue,
+  onInputChange,
+  reset,
+  validateAllFields,
+} from "../reducerActions/intrinsicReducerActions";
 
 export const mapStateToProps = (state: any) => {
-  return { dopState: state.denOfProjectsReducerState };
+  return { intrinsicState: state.intrinsicReducerState };
 };
 
 export function mapDispatchToProps(dispatch: any) {
   return {
-    onDecrimentClick: () => {
-      dispatch(decriment());
+    onInputChange: (e: any) => {
+      dispatch(onInputChange(e.target));
     },
 
-    onIncrimentClick: ()=> {
-        dispatch(incriment());
-    }
+    calculateIntrinsicValue: () => {
+      dispatch(validateAllFields());
+      dispatch(calculateIntrinsicValue());
+    },
+
+    reset: () => {
+      dispatch(reset());
+    },
   };
 }

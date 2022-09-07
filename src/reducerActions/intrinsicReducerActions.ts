@@ -1,13 +1,26 @@
 import intrinsicActionTypes from "../actionTypes/intrinsicActionTypes";
 
-export function incriment() {
+export function onInputChange(data: any) {
   return {
-    type: intrinsicActionTypes.INCRIMENT,
+    type: intrinsicActionTypes.CASH_FLOW_INPUT_CHANGE,
+    data: data,
   };
 }
 
-export function decriment() {
+export function calculateIntrinsicValue() {
   return {
-    type: intrinsicActionTypes.DECRIMENT,
+    type: intrinsicActionTypes.CALCULATE_INTRINSIC_VALUE,
+  };
+}
+
+export function validateAllFields() {
+  return {
+    type: intrinsicActionTypes.VALIDATE_FIELDS,
+  };
+}
+
+export function reset() {
+  return {
+    type: intrinsicActionTypes.RESET_VALUES,
   };
 }
