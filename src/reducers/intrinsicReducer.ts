@@ -47,8 +47,8 @@ const intrinsicReducer: Reducer<intrinsicDTO> = (
         newState.nextFiveYearIncrimentRate === "" ||
         newState.totalShares === ""
       ) {
-        newState.isAllFieldsFilled = false;
-        alert("All fields are required");
+        newState.isAllFieldsFilled = true;
+        // alert("All fields are required");
       } else {
         newState.isAllFieldsFilled = true;
       }
@@ -69,10 +69,16 @@ const intrinsicReducer: Reducer<intrinsicDTO> = (
       if (newState.isAllFieldsFilled) {
         const cashFlows = newState.cashFlowValues.split(",");
         let avgCashFlow = 0;
+        console.log("CashFlow : " + cashFlows);
         for (let i = 0; i < cashFlows.length; i++) {
           avgCashFlow = avgCashFlow + parseInt(cashFlows[i]);
         }
         avgCashFlow = Math.floor(avgCashFlow / cashFlows.length);
+        console.log("avgCashFlow : " + avgCashFlow);
+        if(avgCashFlow <=0 ){
+          alert("Leave it bhai ji...");
+          return newState;
+        }
 
         const nextTenYearFCF: any = [];
         let isFiveYearDone = false;
@@ -94,6 +100,7 @@ const intrinsicReducer: Reducer<intrinsicDTO> = (
             nextTenYearFCF.push(Math.floor(avgCashFlow));
           }
         }
+        console.log("nextTenYearFCF : " + nextTenYearFCF);
         const nextTenYearFCFPresentValues: any = [];
         let totalFCFPresentValue = 0;
         for (let i = 0; i < nextTenYearFCF.length; i++) {
@@ -105,7 +112,7 @@ const intrinsicReducer: Reducer<intrinsicDTO> = (
           nextTenYearFCFPresentValues.push(persentValue);
         }
 
-        console.log(nextTenYearFCFPresentValues);
+        console.log("nextTenYearFCFPresentValues" + nextTenYearFCFPresentValues);
 
         const companySellingPrice = nextTenYearFCFPresentValues[9] * 10;
         const pvOfCashOnSellingTime = Math.floor(

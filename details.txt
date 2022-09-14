@@ -6,3 +6,6 @@ input for total number of shares
 input for cash company will have when we sell the company
 
 table for fcf and present fcf
+
+
+npm run deploy => deployment command
