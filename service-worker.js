@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/intrinsic-value-calculator/precache-manifest.5038fd3a7f3d2fa0bf3c5e1a4e7ab80a.js"
+  "/intrinsic-value-calculator/precache-manifest.2a77e953c4679224cd30c0be04bb1312.js"
 );
 
 self.addEventListener('message', (event) => {
