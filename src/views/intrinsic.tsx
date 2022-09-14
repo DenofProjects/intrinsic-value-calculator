@@ -87,7 +87,7 @@ class Intrinsic extends React.Component<IntrinsicViewProps> {
           <Button
             onClick={this.props.calculateIntrinsicValue}
             variant="primary"
-            className="width100Per marginTop20px"
+            className="width100Per marginTop20px backgroundDarkViolet"
           >
             Calculate
           </Button>
@@ -95,7 +95,7 @@ class Intrinsic extends React.Component<IntrinsicViewProps> {
           <Button
             onClick={this.props.reset}
             variant="primary"
-            className="width100Per marginTop20px"
+            className="width100Per marginTop20px backgroundDarkViolet"
           >
             Reset
           </Button>
