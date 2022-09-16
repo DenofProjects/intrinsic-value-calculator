@@ -47,8 +47,8 @@ const intrinsicReducer: Reducer<intrinsicDTO> = (
         newState.nextFiveYearIncrimentRate === "" ||
         newState.totalShares === ""
       ) {
-        newState.isAllFieldsFilled = true;
-        // alert("All fields are required");
+        newState.isAllFieldsFilled = false;
+        alert("All fields are required");
       } else {
         newState.isAllFieldsFilled = true;
       }
