@@ -1,7 +1,10 @@
 import {
   calculateIntrinsicValue,
+  initialInvestorDetails,
   onInputChange,
+  onPasswordInputChange,
   reset,
+  translate,
   validateAllFields,
 } from "../reducerActions/intrinsicReducerActions";
 
@@ -22,6 +25,19 @@ export function mapDispatchToProps(dispatch: any) {
 
     reset: () => {
       dispatch(reset());
+    },
+
+    // investor code
+    passwordInputChange: (e: any) => {
+      dispatch(onPasswordInputChange(e.target));
+    },
+
+    translate: () => {
+      dispatch(translate());
+    },
+
+    initialInvestorDetails: () => {
+      dispatch(initialInvestorDetails());
     },
   };
 }

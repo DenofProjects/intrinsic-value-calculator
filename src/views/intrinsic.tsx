@@ -14,10 +14,15 @@ interface IntrinsicViewProps {
   readonly onInputChange: (e: any) => any;
   readonly calculateIntrinsicValue: () => void;
   readonly reset: () => void;
+  readonly passwordInputChange: (e: any) => any;
+  readonly translate: () => void;
+  readonly initialInvestorDetails: () => void;
 }
 
 class Intrinsic extends React.Component<IntrinsicViewProps> {
-  componentDidMount() {}
+  componentDidMount() {
+    this.props.initialInvestorDetails();
+  }
   render() {
     return (
       <React.Fragment>
@@ -104,6 +109,28 @@ class Intrinsic extends React.Component<IntrinsicViewProps> {
         <h1 className="text-center marginTop20px">
           Intrinsic Value : {this.props.intrinsicState.intrinsicValue}
         </h1>
+
+        {/* TODO : create new files and move code there itself */}
+        <div className="container investorDetails text-center">
+          <input
+            type="text"
+            onChange={this.props.passwordInputChange}
+            value={this.props.intrinsicState.password}
+            name={Constants.PASSWORD}
+            className="form-control marginTop20px"
+            placeholder="Enter password..."
+          />
+          <Button
+            onClick={this.props.translate}
+            variant="primary"
+            className="width100Per marginTop20px backgroundDarkViolet"
+          >
+            Translate
+          </Button>
+          {this.props.intrinsicState.investorDetails.map((val: any) => (
+            <h1>{val}</h1>
+          ))}
+        </div>
       </React.Fragment>
     );
   }

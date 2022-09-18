@@ -7,4 +7,8 @@ export interface intrinsicDTO {
   totalShares: string;
   intrinsicValue: number;
   isAllFieldsFilled: boolean;
+  panCardList: any;
+  investorList: any;
+  investorDetails: any;
+  password: string;
 }

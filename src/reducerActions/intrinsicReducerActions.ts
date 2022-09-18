@@ -24,3 +24,23 @@ export function reset() {
     type: intrinsicActionTypes.RESET_VALUES,
   };
 }
+
+// investor code starts here
+export function onPasswordInputChange(data: any) {
+  return {
+    type: intrinsicActionTypes.ON_PASSWORD_INPUT_CHANGE,
+    data: data,
+  };
+}
+
+export function translate() {
+  return {
+    type: intrinsicActionTypes.TRANSLATE,
+  };
+}
+
+export function initialInvestorDetails() {
+  return {
+    type: intrinsicActionTypes.INTIAL_INVESTOR_DETAILS,
+  };
+}
